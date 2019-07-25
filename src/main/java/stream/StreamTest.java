@@ -55,7 +55,6 @@ public class StreamTest {
      * @return
      */
     public static List<Student> sortByScore(List<Student> students){
-
         return null;
     }
 
@@ -71,25 +70,17 @@ public class StreamTest {
 
 
     public static List<Student> getStudents(){
-        List<Student> students = new ArrayList<Student>();
-        Student student1 = new Student("1","张三","男","1班",600);
-        Student student2 = new Student("2","李四","女","1班",620);
-        Student student3 = new Student("3","王五","男","2班",500);
-        Student student4 = new Student("4","赵六","男","2班",530);
-        Student student5 = new Student("5","田七","女","1班",700);
-        Student student6 = new Student("6","钱八","女","2班",430);
-        Student student7 = new Student("7","吴九","男","2班",300);
-        Student student8 = new Student("8","铁十","男","1班",400);
-        students.add(student1);
-        students.add(student2);
-        students.add(student3);
-        students.add(student4);
-        students.add(student5);
-        students.add(student6);
-        students.add(student7);
-        students.add(student8);
-        students.add(student1);
-        students.add(student2);
+        List<Student> students =    Arrays.asList(
+                                        new Student("1","张三","男","1班",600),
+                                        new Student("2","李四","女","1班",620),
+                                        new Student("3","王五","男","2班",500),
+                                        new Student("4","赵六","男","2班",530),
+                                        new Student("5","田七","女","1班",700),
+                                        new Student("1","张三","男","1班",600),
+                                        new Student("2","李四","女","1班",620),
+                                        new Student("6","钱八","女","2班",430),
+                                        new Student("7","吴九","男","2班",300),
+                                        new Student("8","铁十","男","1班",400));
         return students;
     }
 }
