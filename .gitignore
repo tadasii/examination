@@ -1,0 +1,58 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+
+### Maven template
+ibocc-service/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+
+# myBatis
+ibocc-service/src/main/resources/db.properties
+ibocc-service/src/main/resources/generatorConfig.xml
+
+#Jrebel
+/ibocc-service/src/main/resources/rebel.xml
+/ibocc-service/src/main/resources/rebel-remote.xml
+/src/main/resources/rebel.xml
+/src/main/resources/rebel-remote.xml
+/target/
+
+#UASS
+/ibocc-service/src/main/resources/uass-config.properties
+#outbound
+/ibocc-service/src/main/resources/application/outbound/outbound-service-registry-global.xml
