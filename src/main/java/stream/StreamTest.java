@@ -1,20 +1,16 @@
 package stream;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
+/**
+ * 实现 getDistinctStudents，getMaleStudents，sumScore，sortByScore，filterByScore五个方法
+ */
 public class StreamTest {
     public static void main(String[] args) {
         List<Student> studentList= getStudents();
-//        studentList =getDistinctStudents(studentList);
-//        studentList =getMaleStudents(studentList);
-//       long  score =sumScore(studentList);
-        studentList = sortByScore(studentList);
-//        System.out.println(score);
         studentList.forEach( student->{
             System.out.println("id=="+student.getId()+"male==="+student.getSex()+"score==="+student.getScore());
         } );
-
     }
 
     /** todo
@@ -23,7 +19,7 @@ public class StreamTest {
      * @return 返回去掉重复id的student的list
      */
     public static List<Student> getDistinctStudents(List<Student> students){
-
+        //代码写在这里，并替换掉返回结果
         return null ;
     }
 
@@ -33,7 +29,7 @@ public class StreamTest {
      * @return
      */
     public static List<Student> getMaleStudents(List<Student> students){
-
+        //代码写在这里，并替换掉返回结果
         return null;
     }
 
@@ -43,9 +39,7 @@ public class StreamTest {
      * @return
      */
     public static long sumScore(List<Student> students){
-
-
-
+        //代码写在这里，并替换掉返回结果
         return  0;
     }
 
@@ -55,16 +49,17 @@ public class StreamTest {
      * @return
      */
     public static List<Student> sortByScore(List<Student> students){
+        //代码写在这里，并替换掉返回结果
         return null;
     }
 
     /**todo
-     * 找出分数大于或者等于指定分数的学生
-     * @param score
+     * 找出分数大于或者等于score的学生
+     * @param score 指定分数
      * @return
      */
     public static List<Student> filterByScore(int score,List<Student> students){
-
+        //代码写在这里，并替换掉返回结果
         return null;
     }
 

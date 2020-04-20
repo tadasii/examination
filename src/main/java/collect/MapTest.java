@@ -1,12 +1,14 @@
+package collect;
 import java.util.*;
 
-
-
+/**
+ * 找出 map中 value == 5 的 key,并打印出来;
+ */
 public class MapTest {
     public static void main(String[] args) {
         HashMap<Integer,Integer> map =  getRandomMap();
-        //todo  找出 map中 value == 5 的 key,并打印出来;
-
+        //找出 map中 value == 5 的 key,并打印出该key和value;
+        //todo 代码写在下面
     }
 
     /**
