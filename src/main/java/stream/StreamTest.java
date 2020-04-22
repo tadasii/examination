@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 实现 getDistinctStudents，getMaleStudents，sumScore，sortByScore，filterByScore五个方法
+ * 注意：不要重写Student类的equals和hashCode方法
  */
 public class StreamTest {
     public static void main(String[] args) {

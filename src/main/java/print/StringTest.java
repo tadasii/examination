@@ -1,6 +1,10 @@
 package print;
 
 public class StringTest {
+    /**
+     * 注意不要运行程序，直接写出打印结果
+     * @param args
+     */
     public static void main(String[] args) {
         String str = "a";
         dealString(str);
