@@ -16,5 +16,15 @@ public class ListTest {
         list.add("ccc");
         list.add("ccc");
         //代码写在下面
+        System.out.println("原来的list:"+list);
+        //通过迭代器删除元素，不会引起指针问题
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()){
+            if("bb".equals(iterator.next())){
+                iterator.remove();
+            }
+        }
+        System.out.println("删除后的list:"+list);
     }
+
 }

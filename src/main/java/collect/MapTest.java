@@ -9,6 +9,13 @@ public class MapTest {
         HashMap<Integer,Integer> map =  getRandomMap();
         //找出 map中 value == 5 的 key,并打印出该key和value;
         //todo 代码写在下面
+        System.out.println("打印map："+map);
+        Set<Integer> mayKeySet =  map.keySet();
+        for (Integer key:mayKeySet){
+            if(map.get(key)==5){
+                System.out.println("key="+key+",value="+map.get(key));
+            }
+        }
     }
 
     /**

@@ -1,6 +1,7 @@
 package stream;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 实现 getDistinctStudents，getMaleStudents，sumScore，sortByScore，filterByScore五个方法
@@ -9,9 +10,15 @@ import java.util.*;
 public class StreamTest {
     public static void main(String[] args) {
         List<Student> studentList= getStudents();
+        studentList= getDistinctStudents(studentList);
+        studentList= getMaleStudents(studentList);
+        studentList= sortByScore(studentList);
+        studentList= filterByScore(500,studentList);
+        long sum = sumScore(studentList);
         studentList.forEach( student->{
             System.out.println("id=="+student.getId()+"male==="+student.getSex()+"score==="+student.getScore());
         } );
+        System.out.println(sum);
     }
 
     /** todo
@@ -21,7 +28,16 @@ public class StreamTest {
      */
     public static List<Student> getDistinctStudents(List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return null ;
+        List<Student> result = new ArrayList<>();
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+           //判断 result 中是否 包含 student
+            boolean is = result.stream().anyMatch(item->item.getId().equals(student.getId()));
+            if(!is){//如果不包含，则添加该元素
+                result.add(student);
+            }
+        }
+        return result ;
     }
 
     /**todo
@@ -31,7 +47,9 @@ public class StreamTest {
      */
     public static List<Student> getMaleStudents(List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return null;
+        //用lamda表达式，一句话就可以搞定
+        students = students.stream().filter(student->student.getSex().equals("男")).collect(Collectors.toList());
+        return students;
     }
 
     /**todo
@@ -41,7 +59,8 @@ public class StreamTest {
      */
     public static long sumScore(List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return  0;
+       long sum = students.stream().mapToInt(Student::getScore).sum();
+        return  sum;
     }
 
     /**
@@ -51,7 +70,8 @@ public class StreamTest {
      */
     public static List<Student> sortByScore(List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return null;
+        List<Student> res = students.stream().sorted((s1,s2)->s2.getScore()-s1.getScore()).collect(Collectors.toList());
+        return res;
     }
 
     /**todo
@@ -61,7 +81,8 @@ public class StreamTest {
      */
     public static List<Student> filterByScore(int score,List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return null;
+        students = students.stream().filter(student->student.getScore()>=score).collect(Collectors.toList());
+        return students;
     }
 
 
