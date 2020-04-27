@@ -86,6 +86,25 @@ public class StreamTest {
         return students;
     }
 
+    /** todo
+     * id重复的students去重
+     * @param students
+     * @return 返回去掉重复id的student的list
+     */
+    public static List<Student> getDistinctStudents(List<Student> students){
+        //代码写在这里，并替换掉返回结果
+        List<Student> result = new ArrayList<>();
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+            //判断 result 中是否 包含 student
+            boolean is = result.stream().anyMatch(item->item.getId().equals(student.getId()));
+            if(!is){//如果不包含，则添加该元素
+                result.add(student);
+            }
+        }
+        return result ;
+    }
+
 
     public static List<Student> getStudents(){
         List<Student> students =   new ArrayList<>();
