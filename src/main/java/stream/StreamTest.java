@@ -35,6 +35,16 @@ public class StreamTest {
 
     }
 
+    /** todo
+     * id重复的students去重
+     * @param students
+     * @return 返回去掉重复id的student的list
+     */
+    public static List<Student> getDistinctStudents(List<Student> students){
+        //代码写在这里，并替换掉返回结果
+        return null ;
+    }
+
     /**todo
      * 找出男同学
      * @param students
