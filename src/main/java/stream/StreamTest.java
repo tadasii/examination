@@ -1,6 +1,7 @@
 package stream;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 实现 deleteStudents,getDistinctStudents，getMaleStudents，sumScore，sortByScore，filterByScore六个方法
@@ -40,16 +41,6 @@ public class StreamTest {
         }
     }
 
-    /** todo
-     * id重复的students去重
-     * @param students
-     * @return 返回去掉重复id的student的list
-     */
-    public static List<Student> getDistinctStudents(List<Student> students){
-        //代码写在这里，并替换掉返回结果
-        return null ;
-    }
-
     /**todo
      * 找出男同学
      * @param students
@@ -57,7 +48,9 @@ public class StreamTest {
      */
     public static List<Student> getMaleStudents(List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return null;
+        //用lamda表达式，一句话就可以搞定
+        students = students.stream().filter(student->student.getSex().equals("男")).collect(Collectors.toList());
+        return students;
     }
 
     /**todo
@@ -67,7 +60,8 @@ public class StreamTest {
      */
     public static long sumScore(List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return  0;
+        long sum = students.stream().mapToInt(Student::getScore).sum();
+        return  sum;
     }
 
     /**
@@ -77,7 +71,8 @@ public class StreamTest {
      */
     public static List<Student> sortByScore(List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return null;
+        List<Student> res = students.stream().sorted((s1,s2)->s2.getScore()-s1.getScore()).collect(Collectors.toList());
+        return res;
     }
 
     /**todo
@@ -87,7 +82,8 @@ public class StreamTest {
      */
     public static List<Student> filterByScore(int score,List<Student> students){
         //代码写在这里，并替换掉返回结果
-        return null;
+        students = students.stream().filter(student->student.getScore()>=score).collect(Collectors.toList());
+        return students;
     }
 
 
