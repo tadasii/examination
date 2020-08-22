@@ -4,12 +4,16 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamTest {
+    /**
+     * 测试方法
+     * @param args
+     */
     public static void main(String[] args) {
         List<Student> studentList= getStudents();
-//        studentList =getDistinctStudents(studentList);
+        studentList =getDistinctStudents(studentList);
 //        studentList =getMaleStudents(studentList);
 //       long  score =sumScore(studentList);
-        studentList = sortByScore(studentList);
+//        studentList = sortByScore(studentList);
 //        System.out.println(score);
         studentList.forEach( student->{
             System.out.println("id=="+student.getId()+"male==="+student.getSex()+"score==="+student.getScore());
