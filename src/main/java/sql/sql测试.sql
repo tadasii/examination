@@ -7,20 +7,21 @@ CREATE TABLE cst_info (
   PRIMARY KEY (id)
 ) ;
 
-INSERT INTO `cst_info` VALUES ('1', '1', 'ccb.com', 'tom');
-INSERT INTO `cst_info` VALUES ('2', '1', 'ccb.com', 'jerry');
-INSERT INTO `cst_info` VALUES ('3', '1', 'ccb.com', 'maliya');
-INSERT INTO `cst_info` VALUES ('4', '2', 'ali.com', 'trump');
-INSERT INTO `cst_info` VALUES ('5', '2', 'ali.com', 'mayun');
-INSERT INTO `cst_info` VALUES ('6', '2', 'ali.com', 'mayun');
-INSERT INTO `cst_info` VALUES ('7', '3', 'abc.com', 'tony');
-INSERT INTO `cst_info` VALUES ('8', '3', 'ccc.com', 'jack');
-INSERT INTO `cst_info` VALUES ('9', '3', 'abc.com', 'marry');
-INSERT INTO `cst_info` VALUES ('10', '4', 'qq.com', 'tony');
-INSERT INTO `cst_info` VALUES ('11', '4', 'qb.com', 'smith');
-INSERT INTO `cst_info` VALUES ('12', '4', 'qq.com', 'm2');
-INSERT INTO `cst_info` VALUES ('13', '4', 'qq.com', 'm2');
-INSERT INTO `cst_info` VALUES ('14', '4', 'qq.com', 'm2');
+INSERT INTO cst_info VALUES ('1', '1', 'ccb.com', 'tom');
+INSERT INTO cst_info VALUES ('2', '1', 'ccb.com', 'jerry');
+INSERT INTO cst_info VALUES ('3', '1', 'ccb.com', 'maliya');
+INSERT INTO cst_info VALUES ('4', '2', 'ali.com', 'trump');
+INSERT INTO cst_info VALUES ('5', '2', 'ali.com', 'mayun');
+INSERT INTO cst_info VALUES ('6', '2', 'ali.com', 'mayun');
+INSERT INTO cst_info VALUES ('7', '3', 'abc.com', 'tony');
+INSERT INTO cst_info VALUES ('8', '3', 'ccc.com', 'jack');
+INSERT INTO cst_info VALUES ('9', '3', 'abc.com', 'marry');
+INSERT INTO cst_info VALUES ('10', '4', 'qq.com', 'tony');
+INSERT INTO cst_info VALUES ('11', '4', 'qb.com', 'smith');
+INSERT INTO cst_info VALUES ('12', '4', 'qq.com', 'm2');
+INSERT INTO cst_info VALUES ('13', '4', 'qq.com', 'm2');
+INSERT INTO cst_info VALUES ('14', '4', 'qq.com', 'm2');
+COMMIT();
 
 
 --题目如下
