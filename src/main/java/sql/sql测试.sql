@@ -33,7 +33,7 @@ COMMIT();
 
 -- 4.统计cst_info表中各个cst_id下user_id的总数
 
--- 5.cst_id应该与tenant_id一一对应。找出一个cst_id有多个tenant_id的cst_id。
+-- 5.cst_id应该与tenant_id一一对应。找出有多个tenant_id的cst_id。
 
 
 
