@@ -27,13 +27,14 @@ COMMIT();
 --题目如下
 -- 1.备份 表cst_info ，备份的表名为cst_info_bak
 
--- 2.统计cst_info表中有多少个cst_id
+-- 2.统计cst_info表中有多少个不同的cst_id
 
--- 3.找出cst_info表中重复数据  cst_id,tenant_id,user_id 三个都相同 就是重复数据.
+-- 3.找出cst_info表中重复数据  （说明：cst_id,tenant_id,user_id 三个都相同 就是重复数据)
 
--- 4.统计cst_info表中各个cst_id下user_id的总数
+-- 4.统计cst_info表中各个cst_id下不同的user_id的总数（比如：cst_id='4',下面有tony，smith，m2 三个user_id
 
 -- 5.cst_id应该与tenant_id一一对应。找出有多个tenant_id的cst_id。
+--   (比如cst_id='3'就有abc.com和ccc.com两个tenant_id,写sql找出这样的cst_id)
 
 
 
